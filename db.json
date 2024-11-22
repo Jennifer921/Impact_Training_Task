@@ -1,0 +1,232 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "users": [
+    {
+      "username": "Dhivyaa",
+      "email": "2k19ece017@kiot.ac.in",
+      "password": "Jenani@123",
+      "cpassword": "Jenani@123"
+    },
+    {
+      "username": "Ragavi",
+      "email": "ragavi@gmail.com",
+      "password": "Lathasaran&9999",
+      "cpassword": "Lathasaran&9999",
+      "booknow": []
+    },
+    {
+      "username": "Abirami",
+      "email": "abirami@gmail.com",
+      "password": "Abirami@123",
+      "cpassword": "Abirami@123",
+      "booknow": []
+    },
+    {
+      "username": "dheepthi",
+      "email": "dheepthi@gmail.com",
+      "password": "Dheepthi@123",
+      "cpassword": "Dheepthi@123",
+      "booknow": []
+    },
+    {
+      "username": "kirandharsha",
+      "email": "kirandharsha@gmail.com",
+      "password": "Kirandharsha@123",
+      "cpassword": "Kirandharsha@123"
+    }
+  ],
+  "upi": [
+    {
+      "username": "Hasini",
+      "id": "hasini@idbi",
+      "email": 1
+    },
+    {
+      "username": "Dheepika",
+      "id": "dheepika@sbi",
+      "email": 2
+    },
+    {
+      "username": "Kathik",
+      "id": "karthik@idbi",
+      "email": 3
+    },
+    {
+      "username": "veenasri",
+      "id": "veenasri@icici",
+      "email": 4
+    }
+  ],
+  "credit": [
+    {
+      "username": "Nivetha",
+      "cnumber": "854283527334",
+      "dates": "22.10.2023",
+      "type": "Visa Card",
+      "email": 1
+    },
+    {
+      "username": "Shobana",
+      "cnumber": "56675422465",
+      "dates": "",
+      "type": "Visa Card",
+      "email": 2
+    },
+    {
+      "username": "Kalai",
+      "cnumber": "6852394644378",
+      "dates": "",
+      "type": "Rupay Card",
+      "email": 3
+    }
+  ],
+  "debit": [
+    {
+      "username": "geetha",
+      "cnumber": "34456544322",
+      "dates": "02.09.2023",
+      "type": "Rupay Card",
+      "email": 1
+    },
+    {
+      "username": "Shiva",
+      "cnumber": "48293857393",
+      "dates": "",
+      "type": "Visa Card",
+      "email": 2
+    },
+    {
+      "username": "Priyamani",
+      "cnumber": "7864257945",
+      "dates": "",
+      "type": "Diners Club",
+      "email": 3
+    }
+  ],
+  "login": [
+    {
+      "email": "Kavitha@gmail.com",
+      "desc": "It was a great experience with them.I was having more health issue but after joining over here they gave more diet plans and consultants are very friendy"
+    },
+    {
+      "email": "Diana@gmail.com",
+      "desc": "It was a great experience with them.I was having more health issue but after joining over here they gave more diet plans and consultants are very friendy"
+    },
+    {
+      "email": "abirami@gmail.com",
+      "desc": "It was a great experience with them.I was having more health issue but after joining over here they gave more diet plans and consultants are very friendy"
+    }
+  ],
+  "tempo": [
+    {
+      "username": "Fathima",
+      "email": "2k19ece017@kiot.ac.in",
+      "dob": "2023-07-28",
+      "weight": "44",
+      "height": "144",
+      "slot": "9-12 A.M",
+      "desc": "Nil",
+      "motive": "Weight-Loss"
+    }
+  ],
+  "booknow": [
+    {
+      "username": "Fathima",
+      "email": "2k19ece017@kiot.ac.in",
+      "dob": "2023-07-28",
+      "weight": "44",
+      "height": "144",
+      "slot": "9-12 A.M",
+      "desc": "Nil",
+      "motive": "Weight-Loss"
+    }
+  ],
+  "coach": [
+    {
+      "name": "John",
+      "experience": "2 yrs",
+      "specialization": "Weight Loss,Muscle Gain",
+      "email": "john@gmail.com",
+      "description": "He is the most dedicated person who helps people to achieve their goals like weight loss,gain,other issues like neck pain,knee pain..",
+      "url": "../assets/images/John.png"
+    },
+    {
+      "name": "Jennifer",
+      "experience": "2 yrs",
+      "specialization": "Weight Loss,Muscle Gain",
+      "email": "jennifer@luvfit.com",
+      "description": "He is the most dedicated person who helps people to achieve their goals like weight loss,gain,other issues like neck pain,knee pain..",
+      "url": "../assets/images/jenny.webp"
+    }
+  ],
+  "yoga": [
+    {
+      "username": "Jennifer",
+      "experience": "2+years",
+      "email": "jennifer@luvfit.com",
+      "url": "assets/images/jenny.webp",
+      "education": " M.A(Yoga)",
+      "description": "She is the most dedicated person who helps people to achieve their goals like weightloss,gain,other issues like neck pain,knee pain.."
+    },
+    {
+      "username": "Sophia",
+      "experience": "2+years",
+      "email": "sophia@luvfit.com",
+      "url": "assets/images/sophia.jpg",
+      "education": "M.A(Yoga)",
+      "description": "She is the most dedicated person who helps people to achieve their goals like weightloss,gain,other issues like neck pain,knee pain.."
+    }
+  ],
+  "nutritionist": [
+    {
+      "username": "Winona",
+      "age": "23",
+      "email": "winona@gmail.com",
+      "description": "She is the most dedicated person who helps people to achieve their goals like weightloss,gain,other issues like neck pain,knee pain..",
+      "url": "assets/images/nut22.jpg",
+      "experience": "2 yrs"
+    },
+    {
+      "username": "Shiny",
+      "experience": "7",
+      "age": "40",
+      "email": "shiny@gmail.com",
+      "description": "She is the most dedicated person who helps people to achieve their goals like weightloss,gain,other issues like neck pain,knee pain..",
+      "url": "../assets/images/Shiny.jpg"
+    }
+  ],
+  "comm": [
+    {
+      "name": "Ranjeetha",
+      "email": "ranjeetha@gmail.com"
+    },
+    {
+      "name": "Latha",
+      "email": "Latha@gmail.com"
+    },
+    {
+      "name": "Karthika",
+      "email": "ragavi@gmail.com"
+    },
+    {
+      "name": "Megna",
+      "email": "megna@gmail.com"
+    }
+  ]
+}

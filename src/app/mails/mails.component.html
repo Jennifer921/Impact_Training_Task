@@ -1,0 +1,20 @@
+<body>
+<h3>Details of people willing to join community</h3>
+
+<div class="box">
+<table id="com">
+  <thead>
+    <td>Name</td>
+    <td>Email</td>
+    <td>Delete</td>
+  </thead>
+
+  <tr *ngFor="let item of commList">
+    <td>{{item.name}}</td>
+  <td>{{item.email}}</td>
+  <td><button class="btn" (click)="deleteNow(item.email)"><i class="fa fa-trash"></i></button></td>
+  </tr>
+</table>
+</div>
+</body>
+

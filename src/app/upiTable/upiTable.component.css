@@ -1,0 +1,24 @@
+
+h3{
+  text-align:center;
+
+}
+
+#com td, #com thead {
+  border: 2px solid #ddd;
+  width:150px;
+}
+#com td {
+  padding: 15px;
+  text-align: left;
+}
+ #com thead
+{background-color: #B1A2CA;}
+
+.box{
+  margin-left: 480px;
+}
+
+.btn{
+  background-color: #B1A2CA;
+}

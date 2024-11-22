@@ -1,0 +1,15 @@
+<body>
+<h3>OUR EXPERTS</h3>
+<div class="mainflex">
+  <div *ngFor="let item of coachList" class="flex">
+      <div><img src="{{item.url}}" style="height:250px;width:250px;border:4px solid black"></div>
+     <div class="align">
+      Name:{{item.name}}<br>
+      Experience:{{item.experience}}<br>
+      Email:{{item.email}}<br>
+      Description:{{item.description}}<br>
+      </div>
+  </div>
+  <div></div>
+</div>
+</body>

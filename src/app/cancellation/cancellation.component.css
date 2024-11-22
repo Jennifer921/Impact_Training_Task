@@ -1,0 +1,109 @@
+/*
+h3{
+  text-align:center;
+
+}
+
+#com td, #com thead {
+  border-bottom: 2px solid #ddd;
+  width:150px;
+}
+
+#com td {
+  padding: 15px;
+  text-align: left;
+}
+
+ #com thead
+{background-color: #B1A2CA;}
+
+
+#com tr:nth-child(even) {background-color: #f2f2f2;}
+
+.box{
+  margin-left: 0px;
+}
+.offer{
+  height:300px;
+  width:100%;
+  background-color: #34adff;
+  background-image:-webkit-linear-gradient(45deg,#7c7e80 50%,#323333 50%);
+}
+.motto{
+  margin-top:40px;
+  text-shadow: 0 0 3px #d9ff00, 0 0 5px #ffb300;
+  font-size:50px;
+  text-align:left;
+  margin-left:40px;
+}
+.btn{
+  cursor: pointer;
+  border-color:#eff0ee;
+  padding: 5rem 3 rem;
+  position: relative;
+  bottom:26px;
+  box-sizing: border-box;
+  padding:5px;
+  font-size: 20px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color:rgb(239, 236, 236);
+  background-color: #070707;
+  width:90px;
+  margin-top: 30px;
+}
+
+.topmargin{
+    font-size:37px;
+    color:white;
+    margin-left:40px;
+}
+
+.btn33{
+  height:50px;
+  margin-left:40px;
+  background-color: #34adff;
+  border-radius:5px;
+} */
+
+.booked{
+  width:80%;
+  height:550px;
+  background-image:-webkit-linear-gradient(45deg,#0b0b0b 50%,#140024 50%);
+  margin-left:130px;
+  margin-top: 10px;
+}
+
+span h4{
+  color:white;
+  margin-left: 400px;
+}
+
+.white{
+  color:white;
+  padding:40px;
+  margin-left:200px;
+  line-height: 40px;
+}
+
+button
+{
+  width:200px;
+  height:40px;
+  border-radius: 7px;
+  background-color:rgb(157, 255, 0) ;
+  margin-left:400px;
+}
+
+.pic{
+  background-color: rgba(138, 138, 122, 0.509);
+  height:400px;
+  width:1200px;
+ margin-top: 30px;
+ margin-left: 30px;
+ font-size: 1.5rem;
+ display:flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+ color: rgb(6, 6, 6);
+}

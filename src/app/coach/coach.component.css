@@ -1,0 +1,142 @@
+
+body{
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+img{
+  height:300px;
+  margin-left: 50px;
+  left:100px;
+  width:50px;
+  border-radius: 999px;
+ }
+.flex{
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  align-items: center;
+  margin-top:2rem;
+  border:3px solid black;
+  background-image:-webkit-linear-gradient(45deg,#ef60d7 50%,#c69ee6 50%);
+  font-weight:700;
+  padding:20px;
+}
+
+.mainflex{
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  flex-wrap: wrap;
+  border:6px solid rgb(6, 55, 77);
+
+}
+.make{
+
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
+  margin-left: 300px;
+  height: 540px;
+  width:600px;
+  background-image: url('https://img.freepik.com/free-photo/empty-save-texture-room-light_1258-175.jpg?w=900&t=st=1682572712~exp=1682573312~hmac=5d8ad9b8329f8da94803fabdf0b8c840a719dfd20c4446e70b7dc69ca9d943b2');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  border-radius: 30px;
+}
+.make label{
+  font-size: 17px;
+  font-weight:600;
+}
+.error{
+  border-color: 2 px solid red;
+}
+
+.make .form-group input{
+     border:none;
+     background: transparent;
+     border-bottom: 2px solid black;
+}
+
+/* button{
+  background-image: linear-gradient(#5da3e9,#093e78) ;
+  border-radius: 8px;
+  border: 1px solid #266DB6;
+  color: aliceblue;
+  font-size: small;
+}
+
+button:hover:after{
+  background-color: #6DCFF6;
+} */
+
+
+.new{
+  width:70%;
+  background-image: url("https://images.pexels.com/photos/9108259/pexels-photo-9108259.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+  margin-top:30px;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  margin-left:200px;
+  height:500px;
+  display:flex;
+  font-weight: 900;
+  font-family:"Century gothic";
+}
+
+
+input
+{
+  width:250px;
+  color:rgb(234, 127, 27);
+}
+
+.error{
+  color:red;
+  font-weight: 900;
+  margin-left:100px;
+  margin-bottom:20px;
+}
+
+label{
+  color:rgb(6, 6, 6);
+
+}
+/* .column1 {
+ position:relative;
+ left:300px;
+ bottom:250px;
+} */
+
+.form-group{
+margin-top:20px;
+margin-left:50px;
+}
+
+
+h3{
+  color:rgb(12, 12, 12);
+  text-align:center;
+  position:relative;
+  top:200px;
+  left:20px;
+  font-weight: 700;
+}
+
+desc{
+  width:200px;
+  color:rgb(234, 127, 27);
+}
+
+button{
+  background-color: orange;
+  height:40px;
+  border-radius: 5px;
+  position:relative;
+  top:90px;
+  right:100px;
+  color:black;
+}

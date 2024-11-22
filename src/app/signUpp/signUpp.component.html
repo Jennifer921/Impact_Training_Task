@@ -1,0 +1,120 @@
+<div class="container">
+  <div class="form-container sign-in-container">
+     <div class="order">
+
+<h2> SIGNUP</h2>
+<form [formGroup]="regForm1" (ngSubmit)="submitForm()">
+  <div class="form-group">
+    <label for="">Name:</label>
+    <input type="text" name="username" formControlName="username">
+  </div>
+  <div *ngIf="regForm1.controls['username'].invalid && regForm1.controls['username'].touched"></div>
+ <small *ngIf="regForm1.controls['username'].errors?.['required'] && regForm1.controls['username'].dirty">Pleasee enter the username</small>
+ <small *ngIf="regForm1.controls['username'].errors?.['pattern']">Atleast 3 characters and Number not allowed</small>
+
+ <div class="form-group">
+  <label for="">Email</label>
+  <input type="email" name="email" formControlName="email">
+  <small *ngIf="regForm1.controls['email'].errors?.['required'] && regForm1.controls['email'].touched">Pleasee enter Email</small>
+  <small *ngIf="regForm1.controls['email'].errors?.['pattern']">Please enter the valid Email ID</small>
+</div>
+
+  <div class="form-group">
+    <label for="">Password:</label>
+    <input type="password" name="password" formControlName="password">
+    <small *ngIf="regForm1.controls['password'].errors?.['required'] && regForm1.controls['password'].touched">Pleasee enter Email</small>
+    <small *ngIf="regForm1.controls['password'].errors?.['pattern']">Please enter the strong password</small>
+
+  </div>
+
+  <div class="form-group">
+    <label for="">Confrim Password:</label>
+    <input type="password" name="cpassword" formControlName="cpassword">
+  </div>
+  <div *ngIf="regForm1.controls['cpassword'].invalid && regForm1.controls['cpassword'].touched">
+  <small *ngIf="regForm1.controls['cpassword'].errors?.['required']">Pleasee enter pasword</small>
+  <small *ngIf="regForm1.controls['cpassword'].errors?.['confirmedValidator']">Pleasee enter the matching pasword</small>
+</div>
+  <button [disabled]="regForm1.invalid">Register</button>
+</form>
+</div>
+</div>
+</div>
+
+
+<style>
+
+
+body{
+  background-color: #f6f5f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  height: 100vh;
+  margin: 0 auto;
+}
+.container{
+  background-color: #fff;
+  margin: 60px 400px;
+
+  border-radius: 10px;
+  width: 384px;
+  max-width: 100%;
+  min-height: 480px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0px 14px 28px rgba(0,0,0,.25),
+  0px 10px 10px rgba(0,0,0,.25);
+}
+.form-container{
+  position: absolute;
+  top: 0%;
+  height: 100%;
+}
+.order{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 100px;
+  height: 100%;
+  text-align: center;
+}
+h2{
+  font-weight: bold;
+  margin: 0;
+  color: #ff4828;
+}
+p{
+  font-size: 16px;
+  padding-top: 15px;
+}
+input{
+  background-color: #eee;
+  border: none;
+  text-decoration: none;
+  margin: 8px 0;
+  padding: 12px 15px;
+  width: 100%;
+}
+button{
+  border-radius: 20px;
+  border: 1px solid #ff4828;
+  background-color: #ff4828;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 45px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.form-group{
+  padding: 7px;
+}
+a{
+  text-decoration: none;
+  color: rgb(23, 166, 255);
+}
+
+</style>

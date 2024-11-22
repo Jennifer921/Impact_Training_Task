@@ -1,0 +1,91 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    font-weight: 900;
+}
+
+.form{
+  width: 100%;
+  height:100vh;
+  /* background-image: url("http://savonfoodssupermarket.com/wp-content/uploads/2017/06/Backgroud-img.jpg"); */
+  background-repeat: no-repeat;
+background-image: url("/assets/images/loginbg.jpg");
+  background-size: cover;
+  font-family:sans-serif;
+}
+
+.flex1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+
+.flex{
+  background-image: linear-gradient(to right, lightgreen, rgb(149, 149, 236));
+  width: 450px;
+  height:350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    text-transform: uppercase;
+    color:rgb(8, 8, 8)
+}
+
+p{
+   font-size: 12px;
+}
+
+.Input{
+  margin-top: 20vh;
+    width: 300px;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #adff2f;
+    font-size: 15px;
+    color: rgb(7, 7, 7);
+    outline: none;
+    padding-top: 30px;
+}
+
+button {
+    margin-top: 15px;
+    width:80px;
+    height:50px;
+    background-color: #adff2f;
+    border-color:#adff2f ;
+    border-radius: 10px;
+    color: rgb(3, 3, 3);
+    padding: 10px;
+    text-transform: uppercase;
+}
+.eyeicon{
+  position:relative;
+  left:200px;
+  bottom:26px;
+  cursor: pointer;
+}
+
+small{
+  color:red;
+  font-size: 8px;
+  margin-left: 2px;
+}
+input{
+  width: 230px;
+  margin-top: 10px;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #447ac5;
+  font-size: 15px;
+  color: rgb(7, 7, 7);
+  outline: none;
+}

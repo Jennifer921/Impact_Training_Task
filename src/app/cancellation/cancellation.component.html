@@ -1,0 +1,33 @@
+<div *ngIf="state1">
+<div class="booked">
+ <span> <h4>YOUR BOOKING</h4></span><br>
+
+ <div  class="flex" *ngFor="let newdatas of newdata">
+ <h5 class="white" >
+ Name  :    {{newdatas.username}}<br>
+ Email :    {{newdatas.email}}<br>
+ Weight:{{newdatas.weight}}<br>
+ Height:{{newdatas.height}}<br>
+ Timing Slot:{{newdatas.slot}}<br>
+ Motive:{{newdatas.motive}}<br>
+ Booking Date:{{newdatas.dob}}<br>
+ Issues:{{newdatas.desc}}<br>
+</h5>
+<button   (click)="sure(newdatas.email)">CANCEL THE BOOKING</button>
+
+</div>
+</div>
+</div>
+<div *ngIf="!state1">
+<div class="pic">
+{{picture}}<br>
+<img src= "/assets/images/empty-cart.webp">
+</div>
+</div>
+<!-- <div class="offer">
+  <h3 class="motto">Free Trial Consultation</h3>
+<p class="topmargin">Offer ends in:<br>
+  <button class="btn" click="offer()">Time</button><br>
+</p>
+<a routerLink="booknow" ><button class="btn33">Book now ></button></a>
+</div> -->

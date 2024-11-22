@@ -1,0 +1,17 @@
+ <body>
+    <div class="form"  >
+        <form class="flex1"  [formGroup]="forgotforms"  (ngSubmit)="set()">
+          <div class="flex">
+        <div class="one"> <h3>Enter Email</h3></div>
+        <div class="form-group">
+          <input type="text" name="email" formControlName="email">
+       <div *ngIf="forgotforms.controls['email'].invalid && forgotforms.controls['email'].touched" style="color:red" >
+       <small style="color:red" *ngIf="forgotforms.controls['email'].errors?.['required'] && forgotforms.controls['email'].dirty">Please enter the email</small>
+       <small style="color:red" *ngIf="forgotforms.controls['email'].errors?.['pattern']">Enter valid Email</small>
+      </div>
+      </div>
+        <div class="three"> <button type="submit" [disabled]="forgotforms.invalid">Next</button></div>
+ </div>
+        </form>
+    </div>
+</body>

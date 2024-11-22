@@ -1,0 +1,90 @@
+<body>
+  <div class="form">
+<form [formGroup]="RegForm" (ngSubmit)="submitForm()" >
+<div class="make">
+  <h3>BOOK HERE</h3>
+  <div class="form-group">
+    <label for="UserName">Name</label>
+    <input class="form-control" type="text"  formControlName="username" placeholder="Please Enter Username" >
+  </div>
+
+  <div class="error"
+    *ngIf="RegForm.controls['username'].invalid && RegForm.controls['username'].touched" >
+    <small *ngIf="RegForm.controls['username'].errors?.['required']"> Enter Username</small>
+    <small *ngIf="RegForm.controls['username'].errors?.['pattern']"> Provide Proper Username</small>
+    <small *ngIf="RegForm.controls['username'].errors?.['noSpaceAllowed']">NoSpaceAllowed</small>
+
+  </div>
+
+  <div class="form-group">
+    <label for="Email">Email</label>
+    <input id="my-input" class="form-control" type="email"  formControlName="email" placeholder="Please Enter Email">
+  </div>
+  <div class="error" *ngIf="RegForm.controls['email'].invalid && RegForm.controls['email'].touched">
+    <small *ngIf="RegForm.controls['email'].errors?.['required']">Enter Email ID</small>
+    <small *ngIf="RegForm.controls['email'].errors?.['pattern']">Invalid Email ID</small>
+  </div>
+     <div class="form-group" >
+       <label >Booking Date</label  >
+       <input type="date"  formControlName="dob" >
+       </div>
+       <div class="error" *ngIf="RegForm.controls['dob'].invalid && RegForm.controls['dob'].touched">
+        <small *ngIf="RegForm.controls['dob'].errors?.['required']">Enter Date</small>
+        <small *ngIf="RegForm.controls['dob'].errors?.['futureDate']">Selected date should be in the future.</small>
+       </div><br>
+       <div class="form-group">
+        <label for="weight">Weight</label>
+        <input  type="email"  formControlName="weight" placeholder="Please Enter Weight">
+      </div>
+      <div class="error" *ngIf="RegForm.controls['weight'].invalid && RegForm.controls['weight'].touched">
+        <small *ngIf="RegForm.controls['weight'].errors?.['required']">Enter weight </small>
+        <small *ngIf="RegForm.controls['weight'].errors?.['min']">Enter proper Weight </small>
+        <small *ngIf="RegForm.controls['weight'].errors?.['max']">Enter proper Weight </small>
+      </div>
+      <div class="form-group">
+        <label for="height">Height</label>
+        <input  type="email"  formControlName="height" placeholder="Please Enter height">
+      </div>
+      <div class="error" *ngIf="RegForm.controls['height'].invalid && RegForm.controls['height'].touched">
+        <small *ngIf="RegForm.controls['height'].errors?.['required']">Enter height </small>
+        <small *ngIf="RegForm.controls['height'].errors?.['min']">Enter proper height </small>
+        <small *ngIf="RegForm.controls['height'].errors?.['max']">Enter proper height </small>
+      </div>
+
+             <div class="form-group">
+             <label >TIMING SLOT</label>
+             <select  formControlName="slot" >
+                 <option selected="" value="Default">(Please select a Timeslot)</option>
+                 <option value="6-9 A.M">6-9 A.M</option>
+                 <option value="9-12 A.M">9-12 A.M</option>
+                 <option value="1-4 P.M">1-4 P.M</option>
+                 <option value="5-8 P.M">5-8 P.M</option>
+                 </select>
+              </div>
+              <div class="error" *ngIf="RegForm.controls['slot'].invalid && RegForm.controls['slot'].touched">
+                <small *ngIf="RegForm.controls['slot'].errors?.['required']">Enter Timing slot</small>
+               </div><br>
+
+
+              <div class="form-group" >
+                <label >MOTIVE</label>
+                <select  formControlName="motive" >
+                    <option selected="" value="Default">(Please select the goal)</option>
+                    <option value="Weight-Loss">Weight-Loss</option>
+                    <option value="Weight-Loss">Weight-Gain</option>
+                    <option value="Weight-Mainteinance">Weight-Mainteinance</option>
+                    </select>
+                 </div>
+                 <div class="error" *ngIf="RegForm.controls['motive'].invalid && RegForm.controls['motive'].touched">
+                  <small *ngIf="RegForm.controls['motive'].errors?.['required']">Select the goal</small>
+                 </div><br>
+
+             <div class="form-group" >
+                 <label for="desc">HEALTH ISSUES</label>
+                 <textarea formControlName="desc" id="desc" ></textarea>
+                 <button type="submit" [disabled]="RegForm.invalid">REGISTER</button>
+             </div><br>
+            </div>
+          </form>
+        </div>
+      </body>

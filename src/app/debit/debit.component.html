@@ -1,0 +1,61 @@
+
+<body>
+  <form [formGroup]="debitForms" (ngSubmit)="bill()">
+    <div class="make">
+      <h4> DEBIT-CARD PAYMENT</h4>
+        <div class="form-group">
+          <label >Card type</label>
+          <select  formControlName="type">
+              <option selected="" value="Default">(Please select Cardtype)</option>
+              <option value="Rupay Card">Rupay Card</option>
+              <option value="Visa Card">Visa Card</option>
+              <option value="Diners Club">Diners Club</option>
+              </select>
+           </div>
+           <div class="error"
+          *ngIf="debitForms.controls['type'].invalid && debitForms.controls['type'].touched" >
+          <small *ngIf="debitForms.controls['type'].errors?.['required']"> Enter Cardtype</small>
+          <small *ngIf="debitForms.controls['type'].errors?.['pattern']"> Provide Proper Cardtype</small>
+        </div>
+
+           <div class="form-group">
+            <label for="UserName">Username</label>
+            <input class="form-control" type="text"  formControlName="username" placeholder="Please Enter Username">
+          </div>
+          <div class="error"
+            *ngIf="debitForms.controls['username'].invalid && debitForms.controls['username'].touched" >
+            <small *ngIf="debitForms.controls['username'].errors?.['required']"> Enter Username</small>
+            <small *ngIf="debitForms.controls['username'].errors?.['pattern']"> Provide Proper Username</small>
+          </div>
+
+
+          <div class="form-group">
+            <label for="UserName">Card Number</label>
+            <input class="form-control" type="text"  formControlName="cnumber" placeholder="Enter cardnumber">
+          </div>
+          <div class="error"
+            *ngIf="debitForms.controls['cnumber'].invalid && debitForms.controls['cnumber'].touched" >
+            <small *ngIf="debitForms.controls['cnumber'].errors?.['required']"> Enter card number</small>
+            <small *ngIf="debitForms.controls['cnumber'].errors?.['maxLength']"> Provide Proper card number</small>
+          </div>
+
+
+      <!-- <div class="form-group">
+      <label >Card Number</label>
+      <input type="text" placeholder="Enter cardnumber" formControlName="cnumber">
+      <span style="color:red;" *ngIf="cnumber && cnumber.touched && cnumber.invalid">Error</span>
+      <span style="color:green;" *ngIf="cnumber && cnumber.valid  && cnumber.touched">Correct</span>
+      </div> -->
+
+      <div class="form-group">
+        <label >Card Expiry Date</label>
+        <input type="date" placeholder="Enter phone number" formControlName="date">
+    </div>
+    <div class="error" *ngIf="debitForms.controls['dates'].invalid && debitForms.controls['dates'].touched">
+      <small *ngIf="debitForms.controls['dates'].errors?.['required']">Enter Expiry-Date</small>
+      <small *ngIf="debitForms.controls['dates'].errors?.['futureDate']">Selected date should be in the future.</small>
+     </div><br>
+  <button type="submit"  >Pay now</button>
+    </div>
+  </form>
+  </body>

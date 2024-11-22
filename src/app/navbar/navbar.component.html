@@ -1,0 +1,55 @@
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<div class="topbar">
+  <div class="animated-text"><a routerLink="">LUV FIT</a></div>
+</div>
+<!--
+<div class="menu">
+		<nav>
+       <ul class="item">
+       	<li ><a routerLink="#">RECIPES</a>
+       		<ul class="item1">
+       			<li><a routerLink="desserts">DESSERTS</a></li>
+       			<li><a routerLink="salads">SALADS</a></li>
+       		</ul>
+       	</li>
+       	<li><a routerLink="gallery">GALLERY</a></li>
+        <div class="rightcorner">
+<a routerLink="NutriLogin" *ngIf="!profile.islogin()">LOGIN</a>
+
+<a  *ngIf="profile.islogin()" (click)="logout()" >LOGOUT</a><br>
+<div class="i">
+<a *ngIf="profile.islogin()" (click)="logout()"><i class="fa-sharp fa-solid fa-user "></i>Hi,{{profile.getname()["username"]}}</a>
+</div>
+    </div>
+  </ul>
+  </nav>
+		</div>
+ -->
+
+ <nav>
+  <ul>
+
+    <li class="dropdown">
+      <a href="#" class="dropbtn">RECIPES</a>
+      <div class="dropdown-content">
+        <a routerLink="desserts">DESSERTS</a>
+        <a routerLink="salads">SALADS</a>
+      </div>
+    </li>
+    <li><a routerLink="reviewPage">REVIEWS</a></li>
+    <li><a routerLink="/cancellation" *ngIf="profile.islogin()">BOOKING</a></li>
+    <li class="login">
+     <button> <a routerLink="NutriLogin" *ngIf="!profile.islogin()">LOGIN</a>
+      <div class="dropbtn"><a *ngIf="profile.islogin()"><i class="fa-sharp fa-solid fa-user "></i>{{data2}}</a>
+        <a  *ngIf="profile.islogin()" (click)="logout()" >LOGOUT</a>
+      </div>
+      </button>
+    </li>
+    <li class="additional-content">
+      <!-- <a *ngIf="profile.islogin()"><i class="fa-sharp fa-solid fa-user "></i>{{profile.getname()["username"]}}</a> -->
+    </li>
+  </ul>
+</nav>

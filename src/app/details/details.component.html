@@ -1,0 +1,31 @@
+
+  <h3>Booked People</h3>
+
+  <div class="box">
+  <table id="com">
+    <thead>
+
+      <td>NAME</td>
+      <td>EMAIL</td>
+      <td>BOOKING</td>
+      <td>WEIGHT(in kgs)</td>
+      <td>HEIGHT(in cm)</td>
+      <td>MOTIVE</td>
+      <td>TIMING</td>
+      <td>ISSUES</td>
+      <td>DELETE</td>
+    </thead>
+    <tr *ngFor="let item of regList">
+    
+    <td>{{item.username}}</td>
+    <td>{{item.email}}</td>
+    <td>{{item.dob}}</td>
+    <td>{{item.weight}}</td>
+    <td>{{item.height}}</td>
+    <td>{{item.motive}}</td>
+    <td>{{item.slot}}</td>
+    <td>{{item.desc}}</td>
+  <td><button class="btn" (click)="deleteNow(item.email)"><i class="fa fa-trash"></i></button></td>
+    </tr>
+  </table>
+  </div>

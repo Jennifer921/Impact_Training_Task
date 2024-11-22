@@ -1,0 +1,30 @@
+<form [formGroup]="reviewForm" (ngSubmit)="submitReview()" >
+
+    <u><h4>{{topic|uppercase}}</h4></u>
+    <div class="form-group">
+      <label for="Email">Email</label><br>
+      <input  type="text" name="email" formControlName="email" placeholder="Please Enter email" >
+    </div>
+
+    <div class="error"
+      *ngIf="reviewForm.controls['email'].invalid && reviewForm.controls['email'].touched" >
+      <small *ngIf="reviewForm.controls['email'].errors?.['required']"> Enter email</small>
+      <small *ngIf="reviewForm.controls['email'].errors?.['email']"> Provide Proper email</small>
+    </div>
+
+    <div class="form-group" >
+      <label for="desc">Your comments</label><br>
+      <textarea formControlName="desc" name="desc" id="desc" ></textarea>
+  <button type="submit" [disabled]="reviewForm.invalid">Submit</button>
+  </div>
+
+</form>
+<div class="mainflex">
+  <div *ngFor="let item of reviewList" class="flex">
+     <div class="align">
+      {{item.email}}<br>
+      Comment:{{item.desc}}<br>
+      </div>
+  </div>
+  <div></div>
+</div>

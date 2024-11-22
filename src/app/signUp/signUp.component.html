@@ -1,0 +1,66 @@
+<body>
+  <div class="form">
+<form [formGroup]="registerForm"  (submit)="signUp()">
+  <div class="make">
+    <h5>Create Account</h5>
+
+    <div class="form-group">
+      <label for="UserName">Username</label>
+      <input class="form-control" type="text"  formControlName="username" placeholder="Please Enter Username">
+    </div>
+
+    <div class="error"
+      *ngIf="registerForm.controls['username'].invalid && registerForm.controls['username'].touched" >
+      <small *ngIf="registerForm.controls['username'].errors?.['required']"> Enter Username</small>
+      <small *ngIf="registerForm.controls['username'].errors?.['pattern']"> Provide Proper Username</small>
+    </div>
+
+
+    <div class="form-group">
+      <label for="Email">Email</label>
+      <input id="my-input" class="form-control" type="email"  formControlName="email" placeholder="Please Enter Email">
+    </div>
+    <div class="error" *ngIf="registerForm.controls['email'].invalid && registerForm.controls['email'].touched">
+      <small *ngIf="registerForm.controls['email'].errors?.['required']">Enter Email ID</small>
+      <small *ngIf="registerForm.controls['email'].errors?.['pattern']">Invalid Email ID</small>
+    </div>
+
+
+    <div class="form-group">
+      <label for="Password">Password</label>
+      <input id="my-input" class="form-control" type="password" name="pass" id="pass" formControlName="password"
+        placeholder="Enter Your Password">
+    </div>
+
+    <div class="error"
+      *ngIf="registerForm.controls['password'].invalid && registerForm.controls['password'].touched">
+      <small *ngIf="registerForm.controls['password'].errors?.['required']">Please Enter Password</small>
+      <small *ngIf="registerForm.controls['password'].errors?.['pattern']">Password must be strong</small>
+    </div>
+    <div class="form-group">
+      <label for="cpassword">Check Password</label>
+      <input id="my-input" class="form-control" type="password" name="cpass" id="cpass"
+        formControlName="cpassword" placeholder="Enter Your Password again">
+    </div>
+    <div class="error"
+      *ngIf="registerForm.controls['cpassword'].invalid && registerForm.controls['cpassword'].touched">
+    <small *ngIf="registerForm.controls['cpassword'].errors?.['required']">Re-Enter password</small>
+    <small *ngIf="registerForm.controls['cpassword'].errors?.['ConfirmedValidator']">Password does not match</small>
+    </div>
+
+    <!-- <div class="form-group">
+      <label >Password</label>
+      <input [type]="changetype ? 'password':'text'" placeholder="Enter  password" formControlName="password">
+      <span class="eyeicon" (click)="viewpassword()"><i [ngClass]= "visible?'fa fa-eye-slash': 'fa fa-eye' "></i></span>
+    <span style="color:red;" *ngIf="password && password.invalid  && password.touched">Error</span>
+    <span style="color:green;" *ngIf="password && password.valid  && password.touched">Correct</span>
+  </div> -->
+
+<div class="align">
+ Already have an account? <a routerLink="/NutriLogin">Login</a>
+</div>
+<button type="submit"  [disabled]="registerForm.invalid">Create Account</button>
+  </div>
+  </form>
+</div>
+</body>

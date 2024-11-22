@@ -1,0 +1,97 @@
+<body>
+  <form [formGroup]="AdminForm" (ngSubmit)="submitForm()">
+    <div class="new">
+          <h3>YOGA INFO</h3>
+      <div class="column">
+      <div class="form-group">
+        <label for="UserName">Name</label>
+        <input class="form-control" type="text"  formControlName="username" placeholder="Please Enter Username" >
+      </div>
+
+      <div class="error"
+        *ngIf="AdminForm.controls['username'].invalid && AdminForm.controls['username'].touched" >
+        <small *ngIf="AdminForm.controls['username'].errors?.['required']"> Enter Username</small>
+        <small *ngIf="AdminForm.controls['username'].errors?.['pattern']"> Provide Proper Username</small>
+      </div>
+
+      <div class="form-group">
+        <label for="Email">Email</label>
+        <input id="my-input" class="form-control" type="email"  formControlName="email" placeholder="Please Enter Email">
+      </div>
+      <div class="error" *ngIf="AdminForm.controls['email'].invalid && AdminForm.controls['email'].touched">
+        <small *ngIf="AdminForm.controls['email'].errors?.['required']">Enter Email ID</small>
+        <small *ngIf="AdminForm.controls['email'].errors?.['pattern']">Invalid Email ID</small>
+      </div>
+
+      <div class="form-group">
+        <label for="url">Image path</label>
+        <input class="form-control" type="text"  formControlName="url" placeholder="Please Enter url path" >
+      </div>
+
+      <div class="error"
+        *ngIf="AdminForm.controls['url'].invalid && AdminForm.controls['url'].touched" >
+        <small *ngIf="AdminForm.controls['url'].errors?.['required']"> Enter url path</small>
+      </div>
+    </div>
+  <div class="column">
+      <div class="form-group">
+        <label for="Experience">Experience</label>
+        <input class="form-control" type="text"  formControlName="experience" placeholder="Please Enter Experience">
+      </div>
+      <div class="error" *ngIf="AdminForm.controls['experience'].invalid && AdminForm.controls['experience'].touched">
+        <small *ngIf="AdminForm.controls['experience'].errors?.['required']">Enter experience </small>
+        <small *ngIf="AdminForm.controls['experience'].errors?.['min']">Enter proper experience </small>
+        <small *ngIf="AdminForm.controls['experience'].errors?.['max']">Enter proper experience </small>
+      </div>
+
+      <!-- <div class="form-group">
+        <label for="education">Education</label>
+        <input class="form-control" type="text"  formControlName="education" placeholder="Please Enter education">
+      </div>
+      <div class="error" *ngIf="AdminForm.controls['education'].invalid && AdminForm.controls['education'].touched">
+        <small *ngIf="AdminForm.controls['education'].errors?.['required']">Enter qualification </small>
+      </div> -->
+      <div class="form-group" >
+        <label >Education</label><br>
+        <select  formControlName="education" >
+            <option selected="" value="Default">Please select the qualification</option>
+            <option value="Weight-Loss">B.N.Y.S(Bachelor of Naturopathy & Yoga Science )</option>
+            <option value="Weight-Mainteinance1">M.A( Master of Arts in Yoga) </option>
+            <option value="Weight-Mainteinance2">M.Sc(Yoga)(Master Of Science in Yoga) </option>
+            <option value="Weight-Mainteinance3">D.Y.Sc(Diploma in Yoga Science) </option>
+            <option value="Weight-Mainteinance4">D.Y.T(Diploma in Yoga Therapy) </option>
+            </select>
+         </div>
+         <div class="error" *ngIf="AdminForm.controls['education'].invalid && AdminForm.controls['education'].touched">
+          <small *ngIf="AdminForm.controls['education'].errors?.['required']">Select the education</small>
+         </div><br>
+
+
+      <div class="form-group" >
+        <label for="desc">Description</label><br>
+        <textarea formControlName="description" id="desc" ></textarea><br>
+    </div>
+
+    <button type="submit" >ADD INFO</button>
+    </div>
+  </div>
+  </form><br>
+
+
+
+<div class="mainflex">
+<div *ngFor="let item of yogaList" class="flex">
+
+  <div><img src="{{item.url}}" style="height:250px;width:250px;border:8px solid black"></div>
+ <div class="align">
+  Name:{{item.username}}<br>
+  Education:{{item.education}}<br>
+  Experience:{{item.experience}}<br>
+  Email:{{item.email}}<br>
+  Description:{{item.description}}<br>
+  </div>
+  <button type="submit" (click)="deleteflex(item.email)"> <i class="fa fa-trash"></i></button>
+</div>
+</div>
+<div></div>
+</body>

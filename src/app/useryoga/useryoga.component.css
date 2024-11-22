@@ -1,0 +1,39 @@
+body{
+
+  background-image: url("/assets/images/gig2.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+}
+h3{
+  text-align: center;
+
+}
+
+img{
+  height:300px;
+  margin-left: 50px;
+  left:100px;
+  width:50px;
+  border-radius: 999px;
+ }
+ .flex{
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  align-items: center;
+  margin-top:2rem;
+  border:3px solid black;
+  background-image:-webkit-linear-gradient(45deg,#ef60d7 50%,#c69ee6 50%);
+  font-weight:700;
+  padding:20px;
+}
+
+.mainflex{
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  flex-wrap: wrap;
+  border:6px solid rgb(6, 55, 77);
+}

@@ -1,0 +1,46 @@
+ <body>
+  <div class="form" >
+      <form class="flex1"  [formGroup]="confirmForms"  (ngSubmit)="set()">
+        <div class="flex">
+      <div class="one"> <h2>Reset Password</h2></div><br>
+      <!-- <div class="form-group">
+
+        <input [type]="changetype ? 'password':'text'" placeholder="Enter password" formControlName="password"><br>
+        <span class="eyeicon" (click)="viewpassword()"><i [ngClass]= "visible?'fa fa-eye-slash': 'fa fa-eye' "></i></span>
+      <span style="color:red;font-size:small;font-weight:none" *ngIf="password && password.invalid  && password.touched">Error</span>
+      <span style="color:green;font-size:small;font-weight:none" *ngIf="password && password.valid  && password.touched">Correct</span>
+    </div>
+    <div class="form-group">
+      <input [type]="changetype ? 'password':'text'" placeholder="Re-Enter password" formControlName="cpassword"><br>
+      <span class="eyeicon" (click)="viewpassword()"><i [ngClass]= "visible?'fa fa-eye-slash': 'fa fa-eye' "></i></span>
+    <span style="color:red;font-size:small;font-weight:none" *ngIf="cpassword && cpassword.invalid  && cpassword.touched">Error</span>
+    <span style="color:green;font-size:small;font-weight:none" *ngIf="cpassword && cpassword.valid  && cpassword.touched">Correct</span>
+  </div> -->
+
+  <div class="form-group">
+    <label for="Password">Password</label>
+    <input  class="form-control" type="password" formControlName="password">
+  </div>
+
+  <div class="error"
+    *ngIf="confirmForms.controls['password'].invalid && confirmForms.controls['password'].touched">
+    <small *ngIf="confirmForms.controls['password'].errors?.['required']">Please Enter Password</small>
+    <small *ngIf="confirmForms.controls['password'].errors?.['pattern']">Password must be strong</small>
+  </div><br>
+
+  <div class="form-group">
+    <label for="cpassword">Check Password</label>
+    <input  class="form-control" type="password"
+      formControlName="cpassword" >
+  </div>
+  <div class="error"
+    *ngIf="confirmForms.controls['cpassword'].invalid && confirmForms.controls['cpassword'].touched">
+  <small *ngIf="confirmForms.controls['cpassword'].errors?.['required']">Re-Enter password</small>
+  <small *ngIf="confirmForms.controls['cpassword'].errors?.['ConfirmedValidator']">Password does not match</small>
+  </div>
+
+    <div class="three"> <button type="submit" [disabled]="confirmForms.invalid">Reset</button></div>
+</div>
+      </form>
+  </div>
+</body>
